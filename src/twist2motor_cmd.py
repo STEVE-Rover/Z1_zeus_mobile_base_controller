@@ -46,7 +46,7 @@ class LowLevelControlNode():
         self.m6_pub = rospy.Publisher('/ros_talon6/motor_percent', Int32, queue_size=10)
 
         # Subscribe to joystick
-        self.twist_sub = rospy.Subscriber('zeus_control/cmd_vel', Twist, self.twist_callback)
+        self.twist_sub = rospy.Subscriber('cmd_vel', Twist, self.twist_callback)
 
         # Initialize configurable params
         # Create a DynamicDynamicReconfigure Server
